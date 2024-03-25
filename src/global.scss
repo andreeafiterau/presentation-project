@@ -26,13 +26,11 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 ion-content{
-    // --offset-bottom: auto!important;
     --overflow: hidden;
     overflow: auto;
     &::-webkit-scrollbar {
         display: none;
     }
-
     --background: radial-gradient(circle at center, rgb(0 0 0 / 25%), rgb(0, 0, 0)), url('./assets/images/background.png') no-repeat center;
 }
 
@@ -51,8 +49,6 @@ ion-app{
     align-items:center;
 }
 
-
 ion-toolbar{
     --min-height:75px;
-
 }

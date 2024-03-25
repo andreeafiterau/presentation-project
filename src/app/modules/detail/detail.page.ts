@@ -8,11 +8,14 @@ import { CharacterService } from '../../services/character.service';
   styleUrls: ['./detail.page.scss'],
 })
 export class DetailPage implements OnInit{
+  
   public itemId: string|null = '';
   public item:any = null;
   public ready:boolean = false;
 
   constructor(private route: ActivatedRoute, private characterService: CharacterService) {
+
+    //get item id from route and then load data
     this.itemId = this.route.snapshot.paramMap.get('id');
   }
 

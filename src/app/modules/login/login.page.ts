@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Form, FormControl, FormGroup, UntypedFormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -21,6 +20,7 @@ export class LoginPage {
   login() {
     this.form.markAllAsTouched();
     if(this.form.valid){
+      //check if login function result is false, and if it is show error message
       if(!this.auth.login(this.form.value)){
         this.show_err_msg = true;
       }

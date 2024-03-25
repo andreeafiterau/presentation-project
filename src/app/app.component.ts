@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationService } from './services/navigation.service';
 import { MenuController } from '@ionic/angular';
 import { AuthService } from './services/auth.service';
-import { Observable, Subject } from 'rxjs';
-import { SplashScreen } from '@capacitor/splash-screen';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,18 +11,18 @@ import { SplashScreen } from '@capacitor/splash-screen';
 })
 export class AppComponent implements OnInit{
 
+  //get authentication state from auth service to decide if the toolbar is rendered or not
   public authenticated:Observable<boolean> = new Observable();
   
   constructor(public navigationService: NavigationService,
-              private menuCtrl: MenuController,
               private auth:AuthService) {
-                this.setAuthenticatedVariable();
-              }
-
-  ngOnInit(): void {
   }
 
-  setAuthenticatedVariable(){
+  ngOnInit(): void {
+    this.getAuthenticationState();
+  }
+
+  getAuthenticationState(){
     this.authenticated = this.auth.authenticated.asObservable();
   }
 }

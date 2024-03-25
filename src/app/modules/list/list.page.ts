@@ -26,11 +26,14 @@ export class ListPage implements OnInit{
   }
 
   loadData() {
+    //get character, and for each character choose randomly a house item from the houses array in character.service,
+    //in order to display the icon at the start of the list item
     let promises = [];
 
     promises.push(this.characterService.getCharacters());
     promises.push(this.characterService.getHouses());
 
+    //process data only after both of the requests have been fetched
     Promise.all(promises)
     .then(data=>{
       data[0].forEach(d=>{
