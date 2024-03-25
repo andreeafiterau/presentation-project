@@ -1,0 +1,16 @@
+.toolbar-wrapper{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ion-icon{
+        width: 25px;
+        height: 25px;
+        margin-right:10px;
+        cursor: pointer;
+    }
+}
+
+ion-menu{
+    margin-top:80px;
+}

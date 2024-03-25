@@ -1,0 +1,28 @@
+.card-wrapper{
+
+    height:100%;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    margin-top:80px;
+
+    ion-card{
+        --background: #809cb147;
+
+        .card-header{
+            font-size:16px;
+            font-weight: bold;
+            color:rgb(214, 214, 214);
+        }
+
+        .content-wrapper{
+            display:flex;
+            flex-direction:column;
+
+            img,span{
+                margin-bottom:10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+:host{
+    height:100%;
+
+    ion-content{
+        height:100%;
+        --background: radial-gradient(circle at center, rgb(0 0 0 / 25%), rgb(0, 0, 0)), url('../../../assets/images/background2.png');
+        --background-position: center;
+    }
+}
