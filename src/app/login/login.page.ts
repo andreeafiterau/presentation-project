@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Form, FormControl, FormGroup, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,21 +12,15 @@ export class LoginPage {
 
   public form: FormGroup = new FormGroup({
     username: new FormControl(null,[Validators.required]),
-    password: new FormControl(null,[Validators.required, Validators.min(6)]),
+    password: new FormControl(null,[Validators.required]),
   });
 
-  constructor(private router: Router) {
-    //this.form = 
-  }
+  constructor(private auth:AuthService) {}
 
   login() {
-
+    this.form.markAllAsTouched();
     if(this.form.valid){
-
-          // Perform login logic (you should implement this)
-    // For now, just navigate to the list page
-    this.router.navigateByUrl('/list');
+      this.auth.login(this.form.value);
     }
-
   }
 }

@@ -1,16 +1,16 @@
 <ion-app>
-  <ion-split-pane  *ngIf="navigationService.pageTitle != 'Login'" contentId="main-content">
+  <ion-split-pane  *ngIf="(authenticated | async)" contentId="main-content">
     <ion-menu contentId="main-content" side="end">
       <app-menu></app-menu>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
 
-  <ion-router-outlet *ngIf="navigationService.pageTitle == 'Login'"></ion-router-outlet>
+  <ion-router-outlet *ngIf="!(authenticated | async)"></ion-router-outlet>
 </ion-app>
 
 <ion-header>
-  <ion-toolbar *ngIf="navigationService.pageTitle != 'Login'" >
+  <ion-toolbar *ngIf="(authenticated | async)" >
     <div class="toolbar-wrapper">
       <ion-title>{{ navigationService.pageTitle }}</ion-title>
       <ion-menu-toggle>
