@@ -1,0 +1,43 @@
+img{
+    margin-right:10px;
+}
+.list-wrapper{
+    height:100%;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    ion-list{
+        padding: 0 !important;
+    
+        ion-item{
+            --inner-padding-bottom: 15px;
+            --inner-padding-top:15px;
+    
+            .item-wrapper{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                width:100%;
+    
+                .item-info{
+                    display:flex;
+                    align-items: center;
+                }
+    
+                .item-navigate-info{
+                    display:none;
+                    font-size:12px;
+    
+                    &.hover{
+                        display:block !important;
+                    }
+                }
+    
+    
+            }
+        }
+    }       
+}
+
+

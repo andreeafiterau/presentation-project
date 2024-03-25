@@ -1,0 +1,28 @@
+.wrapper{
+    display:flex;
+    flex-direction:column;
+    justify-content:start;
+    position:relative;
+    height:100%;
+    padding:100px;
+    max-width:800px;
+
+    ion-button{
+        margin-top: 45px;
+    }
+
+    img{
+        margin-bottom: 45px;
+    }
+
+    .err-msg{
+        color: var(--ion-color-danger);
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .wrapper{
+        padding: 10% !important; 
+    }
+}

@@ -33,11 +33,7 @@ ion-content{
         display: none;
     }
 
-    --background: radial-gradient(circle at center, rgb(0 0 0 / 25%), rgb(0, 0, 0)), url('./assets/images/background.png') no-repeat left ;
-    //background-size: cover; /* or contain, based on your preference */
-    background-position: left; /* or any other position */
-    background-repeat: no-repeat;
-
+    --background: radial-gradient(circle at center, rgb(0 0 0 / 25%), rgb(0, 0, 0)), url('./assets/images/background.png') no-repeat center;
 }
 
 ion-header{

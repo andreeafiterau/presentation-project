@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationService } from './navigation.service';
+import { NavigationService } from './services/navigation.service';
 import { MenuController } from '@ionic/angular';
-import { AuthService } from './auth.service';
+import { AuthService } from './services/auth.service';
 import { Observable, Subject } from 'rxjs';
+import { SplashScreen } from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
@@ -20,11 +21,6 @@ export class AppComponent implements OnInit{
               }
 
   ngOnInit(): void {
-    
-  }
-
-  openMenu(){
-    this.menuCtrl.open('main-content');
   }
 
   setAuthenticatedVariable(){

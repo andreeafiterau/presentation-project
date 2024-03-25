@@ -1,0 +1,23 @@
+<ion-content>
+  <div *ngIf="ready" class="card-wrapper">
+    <ion-card>
+      <ion-card-header>
+        <div class="header-wrapper">
+          <span class="card-header">{{ item?.fullName }}</span>
+          <ion-icon name="arrow-back" size="small" [routerLink]="['/list']"></ion-icon>
+        </div>       
+      </ion-card-header>
+      <ion-card-content>
+        <div class="content-wrapper">
+          <img [src]="item?.imageUrl" width="150px">
+          <span><strong>Title: </strong>{{ item?.title }}</span>
+          <span><strong>Family:</strong> {{ item?.family }}</span>
+          <span><strong>Description:</strong></span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tincidunt mi. Integer lectus ante, vulputate at pretium sit amet, venenatis vel ex. Ut sagittis tellus id congue interdum. Donec ut ornare orci. Mauris eu est dolor. Pellentesque ullamcorper dapibus varius. Integer scelerisque dolor elit, vel commodo quam scelerisque ut. Integer elit nulla, maximus in scelerisque id, congue eu eros. Aliquam dictum, massa vel euismod sollicitudin, nibh augue sollicitudin velit, et varius libero nulla sed justo. Phasellus mattis, ligula sed sollicitudin fermentum, lorem nisi tempor tellus, lacinia vestibulum orci est in nunc. Pellentesque tristique auctor molestie. Aliquam ut diam nunc. Etiam sapien ex, fermentum vel libero ut, sollicitudin interdum tellus. Nullam in vehicula arcu.</p><br>
+          <p>Sed eget arcu eu arcu viverra laoreet id sit amet enim. Integer rutrum tristique turpis, vitae luctus massa fringilla vel. Aenean dolor leo, sollicitudin ornare condimentum eu, lobortis vel lectus. Nunc finibus ante ac tristique pharetra. Suspendisse lobortis blandit lacus, et vestibulum nisi sollicitudin ut. Suspendisse placerat orci mi, vitae scelerisque orci auctor vel. Sed a nunc ac mi dapibus varius. Sed fermentum, odio at commodo aliquam, leo dui tincidunt felis, at scelerisque dolor nisl sit amet augue.</p><br>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ion-spinner *ngIf="!ready"></ion-spinner>
+</ion-content>

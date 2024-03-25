@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="wrapper">
+    <img src="../../assets/images/got.png">
+    <form [formGroup]="form">
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input type="text" formControlName="username" labelPlacement="floating"></ion-input>
+        <span *ngIf="form.get('username')?.touched && form.get('username')?.hasError('required')" slot="error">Username Required</span>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password" labelPlacement="floating"></ion-input>
+        <span *ngIf="form.get('password')?.touched && form.get('password')?.hasError('required')" slot="error">Password Required</span>
+      </ion-item>
+      
+    </form>
+    <span *ngIf="show_err_msg" class="err-msg">Wrong Credetials</span>
+    <ion-button expand="block" (click)="login()">Login</ion-button>
+  </div>
+</ion-content>
