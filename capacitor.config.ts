@@ -1,24 +1,24 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'presentation-project',
+  appId: 'com.presentation.project',
+  appName: 'GOT Characters',
   webDir: 'www',
   server: {
     androidScheme: 'https'
   },
   plugins: {
     SplashScreen: {
-      launchShowDuration: 3000,
+      launchShowDuration: 1000,
       launchAutoHide: true,
-      launchFadeOutDuration: 3000,
-      backgroundColor: "#ffffffff",
+      launchFadeOutDuration: 1000,
+      //backgroundColor: "#ffffffff",
       androidSplashResourceName: "splash",
-      androidScaleType: "CENTER_CROP",
-      showSpinner: true,
-      androidSpinnerStyle: "large",
-      iosSpinnerStyle: "small",
-      spinnerColor: "#999999",
+      //androidScaleType: "CENTER_CROP",
+      showSpinner: false,
+      //androidSpinnerStyle: "large",
+      //iosSpinnerStyle: "small",
+      //spinnerColor: "#999999",
       splashFullScreen: true,
       splashImmersive: true,
       layoutName: "launch_screen",
